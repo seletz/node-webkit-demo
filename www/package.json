@@ -1,0 +1,11 @@
+
+{
+  "version": "0.1.0",
+  "name": "nw-demo",
+  "description": "nodw webkit demo",
+  "main": "index.html",
+  "window": {
+    "toolbar": true,
+    "title":   "node webkit demo"
+  }
+}

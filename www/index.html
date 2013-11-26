@@ -1,0 +1,33 @@
+<html>
+	<head>
+		<title>Foo</title>
+	</head>
+	<body>
+		<h1>hello world</h1>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+		<pre id="version">
+		</pre>
+
+		<script>
+		var fs = require("fs");
+
+		$(function() {
+			var $out = $("#version");
+
+			$out.html("loading ...");
+
+			$.ajax({
+				url: "http://skynet.solunor.com:1080/Windchill/servlet/nexiles/tools/version",
+				username: "nexiles.finder",
+				password: "nexiles.finder",
+				success: function (data) {
+					console.debug(data);
+					$out.html("version " + data.version + " build " + data.build + " date " + data.date ); 
+				}
+			});
+		})
+		</script>
+	</body>
+</html>
+<!-- vim: set ts=4 sw=4 nolist : -->
